@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Topologie réseau sécurisée - BTS SIO SISR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<body class="project-detail">
+    <div class="container section-padding">
+        <a class="button" href="index.html#project">⟵ Retour aux projets</a>
+        <h1>Topologie réseau sécurisée</h1>
+        <p><strong>Contexte :</strong> siège + site distant, besoin d'isoler les flux métiers et d'offrir un accès VPN.</p>
+        <h3>Objectifs</h3>
+        <ul>
+            <li>Segmenter le réseau (utilisateurs, serveurs, invités, IoT).</li>
+            <li>Sécuriser les accès distants et l'administration.</li>
+            <li>Documenter l'adressage et les règles de filtrage.</li>
+        </ul>
+        <h3>Réalisation</h3>
+        <ul>
+            <li>Plan d'adressage IPv4, création VLAN, trunks et routage inter-VLAN.</li>
+            <li>DHCP, DNS internes, NAT/Patrol, ACL/Firewall avec règles par zone.</li>
+            <li>VPN site-à-site + accès nomade, authentification par certificats.</li>
+            <li>Monitoring des liens et syslog centralisé.</li>
+        </ul>
+        <h3>Résultats</h3>
+        <p>Isolation des flux sensibles, accès distant sécurisé, visibilité accrue sur les événements réseau.</p>
+        <h3>Stack</h3>
+        <p>Switch L3, pfSense/OPNsense, OpenVPN/IPsec, DHCP/DNS internes, syslog.</p>
+    </div>
+</body>
+</html>

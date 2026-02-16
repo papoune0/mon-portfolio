@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Script sauvegarde Debian - BTS SIO SISR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<body class="project-detail">
+    <div class="container section-padding">
+        <a class="button" href="index.html#project">⟵ Retour aux projets</a>
+        <h1>Script de sauvegarde / restauration Debian</h1>
+        <p><strong>Contexte :</strong> serveur Debian 13 hébergeant les données utilisateurs (/home) et les configurations système (/etc). Besoin d'un outil simple pour sécuriser et restaurer ces données.</p>
+
+        <h3>Objectifs</h3>
+        <ul>
+            <li>Automatiser la sauvegarde complète des répertoires critiques avec historisation horodatée.</li>
+            <li>Offrir une restauration guidée et fiable en cas d'incident.</li>
+            <li>Tracer chaque exécution via des logs exploitables.</li>
+        </ul>
+
+        <h3>Réalisation</h3>
+        <ul>
+            <li>Script Bash interactif (<code>svg</code>) utilisant <code>rsync -avh</code> et des dossiers horodatés (<code>backup_YYYY-MM-DD_HH-MM-SS</code>).</li>
+            <li>Menu 1) sauvegarde 2) restauration avec vérification d'existence des jeux de sauvegarde.</li>
+            <li>Logs centralisés dans <code>/home/rayanair/sauvegarde/backup.log</code> capturant stdout/stderr.</li>
+            <li>Tests de restauration sur fichiers supprimés + contrôle des permissions conservées.</li>
+        </ul>
+
+        <h3>Résultats</h3>
+        <p>Sauvegardes complètes fiabilisées et restaurations validées. Procédure prête pour une planification CRON et supervision via vérification des logs.</p>
+
+        <h3>Stack</h3>
+        <p>Debian 13, Bash, rsync, CRON (prévu), logs texte.</p>
+
+        <h3>Rôles</h3>
+        <p>Ibrahim : module sauvegarde & création dossiers horodatés. Nathael : module restauration. Zakaria : coordination & tests. Adam : support infra.</p>
+    </div>
+</body>
+</html>

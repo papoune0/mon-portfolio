@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Infrastructure réseau sécurisée - BTS SIO SISR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<body class="project-detail">
+    <div class="container section-padding">
+        <a class="button" href="index.html#project">⟵ Retour aux projets</a>
+        <h1>Infrastructure réseau & système sécurisée</h1>
+        <p><strong>Contexte :</strong> PPE AFORP (octobre 2025) : concevoir et déployer un LAN d'entreprise complet avec services Windows et Linux, sécurité périmétrique et accès Internet contrôlé.</p>
+
+        <h3>Objectifs</h3>
+        <ul>
+            <li>Mettre en place AD DS, DNS, DHCP sur Windows Server pour le domaine promethee.local.</li>
+            <li>Installer un proxy Squid sur Debian 13 pour filtrage et cache web.</li>
+            <li>Sécuriser les flux via firewall/ACL, NAT et GPO appliquées aux postes clients.</li>
+        </ul>
+
+        <h3>Réalisation</h3>
+        <ul>
+            <li>Brassage et adressage du réseau 172.16.3.0/24, passerelle 172.16.3.254.</li>
+            <li>Windows Server 172.16.3.250 : rôles AD DS, DNS, DHCP configurés et tests d'intégration poste client.</li>
+            <li>Debian 13 (172.16.3.251) : installation Squid, règles de filtrage, cache et supervision basique des journaux.</li>
+            <li>Firewall : ACL internes/externes, NAT, durcissement de l'admin ; GPO déployées pour proxy et sécurité poste.</li>
+        </ul>
+
+        <h3>Tests</h3>
+        <ul>
+            <li>Vérification connectivité, obtention IP via DHCP, résolution DNS interne.</li>
+            <li>Connexion domaine avec compte test, application des GPO.</li>
+            <li>Navigation web via proxy Squid et présence des traces dans les logs.</li>
+        </ul>
+
+        <h3>Résultats</h3>
+        <p>Infrastructure fonctionnelle et sécurisée : services AD/DNS/DHCP opérationnels, filtrage web actif, postes intégrés au domaine avec politiques centralisées.</p>
+
+        <h3>Rôles</h3>
+        <p>Ibrahim : DHCP, GPO, installation Debian/Squid. Zakaria : chef de projet, firewall, DNS. Adam & William : déploiement serveur Windows et client.</p>
+
+        <h3>Stack</h3>
+        <p>Windows Server (AD DS, DNS, DHCP), Debian 13 (Squid), firewall/ACL, GPO Windows 10.</p>
+    </div>
+</body>
+</html>

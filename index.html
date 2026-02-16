@@ -13,6 +13,11 @@
     <!-- Site Main Style sheet css -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <style>
+        /* Rend chaque carte projet entièrement cliquable sans changer le style */
+        .project-card-link { display:block; color:inherit; text-decoration:none; }
+        .project-card-link:hover .single-services-box { transform: translateY(-6px); transition: all .25s ease; }
+    </style>
 </head>
 
 <body>
@@ -39,6 +44,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"> <a class="nav-link js-scroll active" href="#home">Accueil</a></li>
                         <li class="nav-item"> <a class="nav-link js-scroll" href="#about">Profil</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#bts-sio">BTS SIO</a></li>
                         <li class="nav-item"> <a class="nav-link js-scroll" href="#skill">Compétences</a></li>
                         <li class="nav-item"> <a class="nav-link js-scroll" href="#project">Projets</a></li>
                         <li class="nav-item"> <a class="nav-link js-scroll" href="#parcours">Parcours</a></li>
@@ -107,6 +113,41 @@
             </div>
         </section>
         <!-- About Section End -->
+
+        <!-- BTS SIO Section Start -->
+        <section id="bts-sio" class="about-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2>Le BTS SIO</h2>
+                            <p>Présentation rapide de la formation Services Informatiques aux Organisations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="about-image">
+                            <img src="assets/img/BTS SIO.jpeg" alt="Présentation BTS SIO">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="about-content">
+                            <h3>Une formation en 2 ans orientée métier</h3>
+                            <p>Le <strong>BTS Services Informatiques aux Organisations</strong> prépare à la gestion d’infrastructures. Mon choix : l’option <strong>SISR (Solutions d’Infrastructure, Systèmes et Réseaux)</strong>.</p>
+                            <ul>
+                                <li><strong>Administration systèmes</strong> : Windows Server, Linux, virtualisation, sauvegardes.</li>
+                                <li><strong>Réseaux & sécurité</strong> : VLAN, DHCP, DNS, NAT, VPN, durcissement et supervision.</li>
+                                <li><strong>Exploitation & support</strong> : scripts Bash/PowerShell, supervision, continuité de service et documentation.</li>
+                            </ul>
+                            <h4>Débouchés SISR</h4>
+                            <p>Technicien systèmes/réseaux, administrateur junior, support IT avancé, analyste cybersécurité, puis poursuite d’études (bachelor ou licence pro).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BTS SIO Section End -->
 		
 		<!-- Skill Section Start -->
 		<section id="skill" class="skill-area section-padding">
@@ -125,12 +166,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Windows Server / Linux (Debian)</h4>
-								<span class="float-right">85%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
-								</div>
-							</div>
+							<p class="mb-0">Administration quotidienne (AD/DS, services réseau), durcissement de base et monitoring.</p>
 						</div>
 					</div>
 					<div class="col-md-6 skill-box">
@@ -138,12 +175,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Réseaux (VLAN, DHCP, DNS, NAT, VPN)</h4>
-								<span class="float-right">85%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
-								</div>
-							</div>
+							<p class="mb-0">Conception de plans d’adressage, segmentation VLAN, déploiement DHCP/DNS, tunnels VPN et dépannage.</p>
 						</div>
 					</div>
 					<div class="col-md-6 skill-box">
@@ -151,12 +184,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Virtualisation & sauvegarde</h4>
-								<span class="float-right">75%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
-								</div>
-							</div>
+							<p class="mb-0">Virtualisation Hyper-V/VirtualBox, snapshots, plans de sauvegarde, tests de restauration réguliers.</p>
 						</div>
 					</div>
 					<div class="col-md-6 skill-box">
@@ -164,12 +193,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Scripting (Bash / PowerShell)</h4>
-								<span class="float-right">70%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
-								</div>
-							</div>
+							<p class="mb-0">Automatisation des tâches récurrentes, scripts de déploiement et supervision (logs, alertes).</p>
 						</div>
 					</div>
 					<div class="col-md-6 skill-box">
@@ -177,12 +202,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Sécurité et supervision</h4>
-								<span class="float-right">75%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
-								</div>
-							</div>
+							<p class="mb-0">Mise en place d’alertes (Zabbix/GLPI), journalisation, patch management et durcissement de configuration.</p>
 						</div>
 					</div>
 					<div class="col-md-6 skill-box">
@@ -190,12 +211,8 @@
 						<div class="skill-item">
 							<div class="skill-info clearfix">
 								<h4 class="float-left mb-3 mt-0">Support utilisateurs & documentation</h4>
-								<span class="float-right">85%</span>
 							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
-								</div>
-							</div>
+							<p class="mb-0">Gestion de tickets, diagnostic poste de travail, rédaction de procédures et animation de mini-formations.</p>
 						</div>
 					</div>
 
@@ -288,49 +305,6 @@
         </section>
         <!-- Service Section End -->
 
-        <!-- Counter Section Start -->
-        <section class="counter-area section-padding">
-            <div class="container">
-                <div class="counter-inner-box">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                            <div class="single-counter-box">
-                                <div class="single-counter">
-                                    <h3 class="odometer" data-count="2">00</h3>
-                                    <p>Années d'expérience/formation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                            <div class="single-counter-box">
-                                <div class="single-counter">
-                                    <h3 class="odometer" data-count="6">00</h3>
-                                    <p>Projets réalisés</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                            <div class="single-counter-box">
-                                <div class="single-counter">
-                                    <h3 class="odometer" data-count="2">00</h3>
-                                    <p>Stages réalisés</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
-                            <div class="single-counter-box">
-                                <div class="single-counter">
-                                    <h3 class="odometer" data-count="4">00</h3>
-                                    <p>Certifications</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Counter Section End -->
-
         <!-- Project Section Start -->
         <section id="project" class="project-area section-padding">
             <div class="container">
@@ -346,87 +320,40 @@
                         <div class="project-list">
                             <ul class="nav" id="project-flters">
                                 <li class="filter filter-active" data-filter=".all">tous</li>
-                                <li class="filter" data-filter=".application">apps web</li>
-                                <li class="filter" data-filter=".webdesign">front-end</li>
-                                <li class="filter" data-filter=".branding">scripts</li>
-                                <li class="filter" data-filter=".photography">réseau</li>
+                                <li class="filter" data-filter=".scripts">scripts</li>
+                                <li class="filter" data-filter=".reseau">réseau</li>
                             </ul>
                         </div>
                     </div>
                     <div class="project-container">
                         <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign">
-                            <a class="popup-img project-item " href="assets/img/projects/work-1.jpg"> <img src="assets/img/projects/work-1.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Admin BDD commerciale</h4>
-                                        <h6>Linux/Windows, sauvegardes</h6>
+                        <div class="col-lg-4 col-md-6 project-grid-item all reseau">
+                            <a class="project-card-link" href="Doucument%20PPE%20se%CC%81curite%CC%81%20(22).pdf" target="_blank" rel="noopener">
+                                <div class="single-services-box project-card">
+                                    <div class="single-services">
+                                        <div class="services-icon"> <i class="pe-7s-shield"></i> </div>
+                                        <div class="services-text">
+                                            <h4>Infrastructure réseau sécurisée</h4>
+                                            <p>LAN d'entreprise promethee.local : AD/DNS/DHCP sur Windows, proxy Squid Debian, firewall ACL/NAT et GPO pour postes clients.</p>
+                                            <p><strong>Résultat :</strong> réseau isolé, filtrage web actif, postes intégrés au domaine.</p>
+                                            <a class="button mt-2 d-inline-block" href="Doucument%20PPE%20se%CC%81curite%CC%81%20(22).pdf" target="_blank" rel="noopener">En savoir plus</a>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all application photography">
-                            <a class="popup-img project-item" href="assets/img/projects/work-2.jpg"> <img src="assets/img/projects/work-2.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Topologie réseau sécurisée</h4>
-                                        <h6>VLAN, DHCP, DNS, NAT, VPN</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign">
-                            <a class="popup-img project-item " href="assets/img/projects/work-3.jpg"> <img src="assets/img/projects/work-3.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Supervision infrastructure</h4>
-                                        <h6>Dashboards et alertes</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesig photographyn">
-                            <a class="popup-img project-item" href="assets/img/projects/work-4.jpg"> <img src="assets/img/projects/work-4.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Déploiement postes</h4>
-                                        <h6>Masterisation, GPO, AD</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all application webdesign photography">
-                            <a class="popup-img project-item" href="assets/img/projects/work-5.jpg"> <img src="assets/img/projects/work-5.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Automatisation sauvegardes</h4>
-                                        <h6>Bash/PowerShell + planification</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all branding photography">
-                            <a class="popup-img project-item" href="assets/img/projects/work-6.jpg"> <img src="assets/img/projects/work-6.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Documentation & fiches</h4>
-                                        <h6>Procédures et base de connaissances</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- project-item -->
-                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesig photographyn">
-                            <a class="popup-img project-item" href="assets/img/projects/work-7.jpg"> <img src="assets/img/projects/work-7.jpg" alt="img">
-                                <div class="project-img-overlay">
-                                    <div class="project-content">
-                                        <h4>Support utilisateurs</h4>
-                                        <h6>Multi-site & priorisation</h6>
+                        <div class="col-lg-4 col-md-6 project-grid-item all scripts">
+                            <a class="project-card-link" href="Doucument%20PPE%20Linux%20(111).pdf" target="_blank" rel="noopener">
+                                <div class="single-services-box project-card">
+                                    <div class="single-services">
+                                        <div class="services-icon"> <i class="pe-7s-disk"></i> </div>
+                                        <div class="services-text">
+                                            <h4>Script sauvegarde Debian</h4>
+                                            <p>Script Bash interactif (rsync) pour sauvegarde/restauration horodatée de /home et /etc avec logs centralisés.</p>
+                                            <p><strong>Résultat :</strong> restaurations testées et prêtes à être planifiées via CRON.</p>
+                                            <a class="button mt-2 d-inline-block" href="Doucument%20PPE%20Linux%20(111).pdf" target="_blank" rel="noopener">En savoir plus</a>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -454,7 +381,7 @@
                                 <div class="services-icon"> <i class="pe-7s-server"></i> </div>
                                 <div class="services-text">
                                     <h3>Exploitation BDD - HAS Transport</h3>
-                                    <p>Asnières-sur-Seine (2024 - 2025) : administration base commerciale, sauvegardes, maintenance serveurs, topologie réseau (VLAN, DHCP, DNS, NAT, VPN) et support utilisateurs.</p>
+                                    <p>Asnières-sur-Seine (2024 - 2026) : administration base commerciale, sauvegardes, maintenance serveurs, topologie réseau (VLAN, DHCP, DNS, NAT, VPN) et support utilisateurs.</p>
                                 </div>
                             </div>
                         </div>
@@ -476,7 +403,7 @@
                                 <div class="services-icon"> <i class="pe-7s-study"></i> </div>
                                 <div class="services-text">
                                     <h3>Parcours scolaire</h3>
-                                    <p>BTS SIO SISR (INGETIS, Paris) - 2025 (en cours) | Baccalauréat (Lycée Français Int. de Djeddah) - 2024, mention bien.</p>
+                                    <p>Baccalauréat (Lycée Français Int. de Djeddah) - 2024, mention bien | BTS Services Informatiques aux Organisations (SIO) – 1<sup>re</sup> année, parcours SISR & SLAM (INGETIS Paris) - 2024‑2025 | BTS SIO – Option SISR, 2<sup>e</sup> année (AFORP Tremblay-en-France) - 2025‑2026 (en cours / à venir).</p>
                                 </div>
                             </div>
                         </div>
