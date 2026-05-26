@@ -143,15 +143,23 @@
         offset: '50%'
       });
     }
-	
+
 		// Odometer JS
-        $('.odometer').appear(function() {
-			var odo = $(".odometer");
-			odo.each(function() {
-				var countNumber = $(this).attr("data-count");
-				$(this).html(countNumber);
-			});
-        });
+        var counterStarted = false;
+        function checkCounters() {
+            if (counterStarted || $('.odometer').length === 0) return;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            var sectionTop = $('.odometer').first().offset().top;
+            if (windowBottom > sectionTop) {
+                counterStarted = true;
+                $('.odometer').each(function() {
+                    var countNumber = $(this).attr("data-count");
+                    $(this).html(countNumber);
+                });
+            }
+        }
+        $(window).on('scroll', checkCounters);
+        setTimeout(checkCounters, 500);
 	
 	// Testimonials owl
 	$('#testimonial-slide').owlCarousel({
