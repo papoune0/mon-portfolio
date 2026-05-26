@@ -4,12 +4,19 @@
     <meta charset="utf-8">
     <title>Script sauvegarde Debian - BTS SIO SISR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet BTS SIO SISR d'Ibrahim SY : Script de sauvegarde et restauration Debian (PPE Linux)">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 <body class="project-detail">
+    <nav style="background:#111;padding:12px 20px;position:fixed;top:0;width:100%;z-index:999;border-bottom:1px solid #222;">
+        <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:20px;">
+            <a href="index.html" style="color:#fff;font-family:'Josefin Sans',sans-serif;font-weight:600;text-decoration:none;">Ibrahim SY</a>
+            <a href="index.html#project" style="color:#aaa;font-family:'Josefin Sans',sans-serif;text-decoration:none;">⟵ Retour aux projets</a>
+        </div>
+    </nav>
+    <div style="height:60px;"></div>
     <div class="container section-padding">
-        <a class="button" href="index.html#project">⟵ Retour aux projets</a>
         <h1>Script de sauvegarde / restauration Debian</h1>
         <p><strong>Contexte :</strong> serveur Debian 13 hébergeant les données utilisateurs (/home) et les configurations système (/etc). Besoin d'un outil simple pour sécuriser et restaurer ces données.</p>
 
@@ -31,11 +38,23 @@
         <h3>Résultats</h3>
         <p>Sauvegardes complètes fiabilisées et restaurations validées. Procédure prête pour une planification CRON et supervision via vérification des logs.</p>
 
+        <h3>Rôles</h3>
+        <p>Ibrahim : module sauvegarde & création dossiers horodatés. Nathael : module restauration. Zakaria : coordination & tests. Adam : support infra.</p>
+
+        <h3>Compétences BTS SIO SISR couvertes</h3>
+        <ul>
+            <li><strong>B1.2</strong> — Exploiter l'infrastructure</li>
+            <li><strong>B1.3</strong> — Gérer le patrimoine informatique</li>
+            <li><strong>B3.1</strong> — Protéger les données à caractère personnel</li>
+        </ul>
+
         <h3>Stack</h3>
         <p>Debian 13, Bash, rsync, CRON (prévu), logs texte.</p>
 
-        <h3>Rôles</h3>
-        <p>Ibrahim : module sauvegarde & création dossiers horodatés. Nathael : module restauration. Zakaria : coordination & tests. Adam : support infra.</p>
+        <br>
+        <a class="button" href="Doucument%20PPE%20Linux%20(111).pdf" target="_blank" rel="noopener">
+            Télécharger le dossier PPE complet (PDF)
+        </a>
     </div>
 </body>
 </html>
